@@ -12,6 +12,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/business")
 @RequiredArgsConstructor
+@CrossOrigin
 public class BusinessController {
 
     private final BusinessService businessService;
