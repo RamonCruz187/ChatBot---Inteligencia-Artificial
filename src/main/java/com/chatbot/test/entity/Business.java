@@ -23,6 +23,9 @@ public class Business {
     @Column(length = 3000)
     private String information;
 
-    @OneToMany(targetEntity = Query.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "business")
-    private List<Query> queries;
+//    @OneToMany(targetEntity = Query.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "business")
+//    private List<Query> queries;
+
+    @OneToMany(targetEntity = Chat.class, cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "business")
+    private List<Chat> chats;
 }

@@ -26,8 +26,12 @@ public class Query {
 
     private LocalDateTime timestamp;
 
-    @ManyToOne(targetEntity = Business.class)
-    private Business business;
+//    @ManyToOne(targetEntity = Business.class)
+//    private Business business;
+
+    @ManyToOne
+    @JoinColumn(name = "chat_id")
+    private Chat chat;
 
 
 }
